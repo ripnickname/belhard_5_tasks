@@ -44,7 +44,19 @@ def get_seconds(h: int, m: int, s: int) -> Union[int, str]:
     :return: количество сеекунд от 00:00:00
     :rtype: int
     """
-    result = None
+    result = 0
+    if 0 <= h <= 23:
+        result += h * 3600
+    else:
+        return 'Ошибка. Допустимое значение для часов 0..23'
+    if 0 <= m <= 59:
+        result += m * 60
+    else:
+        return 'Ошибка. Допустимое значение для минут 0..59'
+    if 0 <= s <= 59:
+        result += s
+    else:
+        return 'Ошибка. Допустимое значение для секунд 0..59'
     return result
 
 
