@@ -22,7 +22,7 @@ def odd_in_list(some_list: list) -> list:
     for i in some_list:
         element = i
         if isinstance(element, int) and not isinstance(element, bool):
-            if element %2 == 0:
+            if element % 2 == 0:
                 odd_list.append(element)
     print(odd_list)
     return odd_list

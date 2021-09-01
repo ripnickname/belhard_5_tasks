@@ -57,7 +57,7 @@ if __name__ == '__main__':
     gift = None
     try:
         mark = get_score()
-        if mark <7:
+        if mark < 7:
             exception = ValueError()
             exception.mark = mark
             raise exception

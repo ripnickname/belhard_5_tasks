@@ -30,7 +30,7 @@ def processing_f(str_with_f: str) -> Union[int, str]:
     count_f = 0
     for symbol in str_with_f:
         if symbol == 'f':
-            count_f +=1
+            count_f += 1
     if count_f == 0:
         result = str_with_f.swapcase()
     elif count_f == 1:

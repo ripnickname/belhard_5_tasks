@@ -42,6 +42,7 @@ def is_divide_by(to_divide: int, divider_1: int, divider_2: int) -> bool:
         result = False
     return result
 
+
 if __name__ == '__main__':
     td_val = int(input('Введите число для проверки: '))
     d_1_val = int(input('Введите первый делитель: '))
