@@ -14,7 +14,12 @@ TypeError с сообщением "Все элементы списка долж
 
 def odd_sum(int_list: list) -> int:
     summa = 0
-    # TODO написать свой код здесь
+    for i in int_list:
+        if isinstance(i, int) and not isinstance(i, bool):
+            if i % 2 == 1:
+                summa += i
+        else:
+            raise TypeError('Все элементы списка должны быть целыми числами')
     return summa
 
 
@@ -28,3 +33,7 @@ if __name__ == '__main__':
     except ValueError as exc:
         print(exc)
         print("Все элементы списка должны быть целыми числами")
+    else:
+        print('Ошибок нет')
+    finally:
+        print('Работает всегда')
