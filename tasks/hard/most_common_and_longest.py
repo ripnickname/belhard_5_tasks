@@ -16,7 +16,7 @@ def common_and_longest(text: str) -> tuple:
         current_value = counter.setdefault(word, 0)
         counter[word] = current_value + 1
 
-    common = words [0]
+    common = words[0]
     for key, value in counter.items():
         if value > counter[common]:
             common = key
